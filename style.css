@@ -1,0 +1,592 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    width: max-content;
+    float:right;
+    position: relative;
+    left: -3%;
+    z-index:1000;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family:'DMSans_Medium';
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    color: #D96098;
+  }
+.title {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  right: 50%;
+  margin:0; 
+}
+
+
+
+.caption {
+  position: absolute;
+  left: -3%;
+  right: 0;
+  top: 30%;
+  width: 100%;
+  text-align: right;
+}
+
+.caption span.border {
+  color: #000000;
+  padding: 2px;
+  margin: 10px;
+  font-size: 25px;
+}
+
+
+
+#titulo {
+  font-size: 400%;
+  font-family:'DMSans_Bold'; 
+}
+
+#titulo-buscador {
+  font-size: 200%;
+  font: "DMSans_Bold";
+  color: black;
+  float: left;
+  padding: 5px;
+  margin-left: 20px;
+  margin-top: 8px;
+  display: block;
+}
+
+#N1 {
+  padding: 6px;
+  margin: 6px;
+  margin-right: 2px;
+  font-size: 150%;
+  font: "DMSans_Regular";
+  background: #24a19c;
+  border: 160% 160%;
+  border-radius: 50%;
+  color: #f5f5f5;
+}
+
+#I1 {
+  font: 'DMSans_Regular';
+  color: black;
+  font-size: 130%;
+  display: block;
+
+}
+
+.info-colegio {
+  width: 70%;
+  height: 350px;
+  background: white;
+  margin: 20px;
+  display: none;
+}
+
+/* Fuentes DMSans a utilizar */
+@font-face {
+    font-family:'DMSans_Bold';
+    src:url("Fuentes/DMSans-Bold.ttf");
+}
+@font-face {
+  font-family:'DMSans_Bold_Italic';
+  src:url("Fuentes/DMSans-BoldItalic.ttf");
+}
+@font-face {
+  font-family:'DMSans_Italic';
+  src:url("Fuentes/DMSans-Italic.ttf");
+}
+@font-face {
+  font-family:'DMSans_Medium';
+  src:url("Fuentes/DMSans-Medium.ttf");
+}
+@font-face {
+  font-family:'DMSans_Medium_Italic';
+  src:url("Fuentes/DMSans-MediumItalic.ttf");
+}
+@font-face {
+  font-family:'DMSans_Regular';
+  src:url("Fuentes/DMSans-Regular.ttf");
+}
+
+
+/*Estilo de sección descripción de establecimientos*/
+.colegios-especiales {
+  display: inline;
+  float: left; /*quedó al revés*/
+  width: 50%;
+  max-width: 50%
+  margin: 20px;
+  padding: 10px;
+  background-color: gray; /*esto es solo por mientras para ver si está funcionando la delimitación de espacio hehe*/
+}
+
+#establecimiento {
+  font-size: 23px;
+  margin: 5px;
+}
+
+.colegios-pie {
+  display: inline;
+  float: right;
+  width: 50%;
+  max-width: 50%
+  margin: 20px;
+  padding: 10px;
+  background-color: gray; /*esto es solo por mientras para ver si está funcionando la delimitación de espacio hehe*/
+}
+
+#colegioimg {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding: 10px;
+  width: 25%;
+}
+
+  
+#exp-colegios-especiales {
+  padding: 10px;
+  margin: 10px;
+}
+
+#exp-colegios-pie {
+  padding: 10px;
+  margin: 10px;
+}
+
+.button {
+  transition-duration: 0.4s;
+  background-color: #325288;
+  border: none;
+  border-radius: 10px;
+  color: #f5f5f5;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-family:'DMSans_Regular';
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+.button:hover {
+  background-color: #24A19C;
+  color: #FAEEE7;
+}
+
+
+.buttonque {
+  transition-duration: 0.4s;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  color: grey;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-family:'DMSans_Regular';
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+.buttonque:hover {
+  background-color: #24A19C;
+  color: #FAEEE7;
+}
+
+
+
+/* arreglar posición mapita... después de arreglar márgenes de la página */
+.mapita {
+  width: 50%;
+  display: flex;
+  place-content: left left;
+  position: absolute;
+  left: -25%;
+  top: 20%;
+  text-align: center;
+}
+.mapita path {
+  fill:rgb(170, 0, 200);
+  stroke: rgb(78, 5, 111);  
+  stroke-width: 1px;
+}
+.mapita :hover {
+  fill:#000000
+}
+.mapita a.active {
+    color: #D96098;
+  }
+.mapita div {
+  fill:rgb(170, 0, 200);
+  stroke: rgb(78, 5, 111);  
+  stroke-width: 1px;
+}
+.mapita div :hover {
+  fill:#000000
+}
+.Valpo_region {
+  display: none;
+  position: absolute;
+  left: 42.5%;
+  top: 35%;
+  place-content: left left;
+}
+.Valpo_region path {
+  fill:rgb(170, 0, 200);
+  stroke: rgb(78, 5, 111);  
+  stroke-width: 1px;
+}
+.Valpo_region :hover {
+  fill:#000000
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("Imágenes+vectores/Puzzle_entero.png");
+  min-height: 100%;
+}
+
+.Contexto {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family:'DMSans_Bold';
+  color: #111;
+  font-size: 25px;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+/* Cosas de la pagina about */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  font-family:'DMSans_Medium';
+}
+
+.about-section {
+  padding: 60px;
+  text-align: center;
+  background-color: #76dbd7;
+  color: black;
+  font-family:'DMSans_Medium';
+}
+
+#conocenos {
+  padding: 6px;
+  margin: 6px;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title3 {
+  color: grey;
+}
+.button2 {
+  transition-duration: 0.4s;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #325288;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.button2:hover {
+  background-color: #24A19C;
+}
+
+.cssanimation, .cssanimation span {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.cssanimation span { display: inline-block }
+
+.fadeInBottom { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}
+.flex-parent {
+  display: flex;
+}
+.flex-child {
+  flex: 1;
+}
+
+
+/* RESET RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --black: #000000;
+  --white: #fff;
+  --green: #24A19C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 50px 0;
+  color: var(--black);
+  font: 1rem/1.3 sans-serif;
+}
+
+.author-archive {
+  padding: 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 a {
+  transition: all 0.1s;
+}
+
+h1 a:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+
+.filters {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filters * {
+  display: inline-block;
+}
+
+.filters label {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 2rem;
+  min-width: 50px;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.filters label:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+
+/* FILTERED ELEMENTS (POSTS)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.posts {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.posts .post {
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.posts .post-title {
+  font-size: 1.3rem;
+}
+
+.posts .post-title:hover {
+  text-decoration: underline;
+}
+
+.posts figcaption {
+  padding: 1rem;
+}
+
+.posts .post-categories {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.posts .post-categories * {
+  display: inline-block;
+}
+
+.posts .post-categories li {
+  margin-bottom: 0.2rem;
+}
+
+.posts .post-categories a {
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid;
+  line-height: normal;
+  transition: all 0.1s;
+}
+
+.posts .post-categories a:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+
+/* FILTERING RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[value="General"]:checked ~ .filters [for="General"],
+[value="ColegiosPIE"]:checked ~ .filters [for="ColegiosPIE"],
+[value="EscuelasEspeciales"]:checked ~ .filters [for="EscuelasEspeciales"] {
+  background: var(--green);
+  color: var(--white);
+}
+
+[value="General"]:checked ~ .posts [data-category] {
+  display: block;
+}
+
+[value="ColegiosPIE"]:checked ~ .posts .post:not([data-category~="ColegiosPIE"]),
+[value="EscuelasEspeciales"]:checked ~ .posts .post:not([data-category~="EscuelasEspeciales"]),
+
+
+.filtro {
+  display: none;
+}
+
+/* MODAl */
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+}
+
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal{
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+  width: 600px;
+  max-width: 100%;
+}
+
+.modal h1 {
+  margin: 0
+}
+
+.modal. p {
+  font-size: 14px;
+}
+
+#open {
+  background-color: #47a386;
+  border: 0;
+  padding: 10px 10px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+}

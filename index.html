@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="Fuentes/DMSans-Bold.ttf">
+  <link rel="stylesheet" type="text/css" href="Fuentes/DMSans-BoldItalic.ttf">
+  <link rel="stylesheet" type="text/css" href="Fuentes/DMSans-Italic.ttf">
+  <link rel="stylesheet" type="text/css" href="Fuentes/DMSans-Medium.ttf">
+  <link rel="stylesheet" type="text/css" href="Fuentes/DMSans-MediumItalic.ttf">
+  <link rel="stylesheet" type="text/css" href="Fuentes/DMSans-Regular.ttf">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Title</title>
+</head>
+
+
+
+
+
+<body bgcolor="#f5f5f5" bgproperties="fixed">
+
+  <!--BARRA SUPERIOR DE CONTENIDOS-->
+  <div class="topnav">
+    <a class="active" href="index.html">Inicio</a>
+    <a href="about.html">Conócenos</a>
+  </div>
+
+  <!--DIBUJO-->
+
+
+  <div class="bgimg-1"></div>
+  <div class="caption">
+    <span id="titulo" class="border">Colegios Especiales<br>& PIE en Chile</span>
+  </div>
+  </div>
+
+  <!--OPCIONES DE EDUCACIÓN ESPECIAL-->
+
+  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px">
+    <h3 class="Contexto" style="text-align:center;">Opciones de <span style="color: #d96098;"> educación diferencial
+      </span> en Chile</h3>
+
+
+    <section id="tipos-establecimiento">
+      <div class='parent flex-parent'>
+
+        <div class='child flex-child'>
+          <div class="card">
+            <img id="colegioimg" src="Imágenes+vectores/colegio1.png" alt="silueta colegio">
+            <div class="container">
+              <h3 id="establecimiento" style="font-family: 'DMSans_Medium';color:black">Colegios Especiales</h3>
+              <button id="button1" class="buttonque">¿Qué son?</button>
+
+              <!--Esto se supone que solo aparece cuando se aprieta el botón de "¿Qué son?"-->
+
+              <div id="exp-colegios-especiales">
+                <p>Establecimientos educacionales especializados que <strong><span style="color:black">educan a
+                      estudiantes con discapacidad que requieren apoyos permanentes e intensivos</span></strong> <span
+                    style="color:grey"> en el área de la comunicación, del funcionamiento adaptativo, de su autonomía e
+                    independencia personal, y adecuaciones curriculares de acceso o a los objetivos de aprendizaje según
+                    las características y necesidades de los estudiantes frente al currículum, para así <b><span
+                        style="color:black">asegurar su proceso educativo y de transición a la vida adulta</span></b>.
+                </p>
+              </div>
+              <script>
+                const targetDiv2 = document.getElementById("exp-colegios-especiales");
+                const btn2 = document.getElementById("button1");
+                targetDiv2.style.display = "none"
+                btn2.onclick = function () {
+                  if (targetDiv2.style.display !== "none") {
+                    targetDiv2.style.display = "none";
+                  } else {
+                    targetDiv2.style.display = "block";
+                  }
+                };
+              </script>
+
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class='child flex-child'>
+          <div class="card">
+            <img id="colegioimg" src="Imágenes+vectores/colegio1.png" alt="silueta colegio">
+            <div class="container">
+              <h3 id="establecimiento" style="font-family: 'DMSans_Medium';color:black">Colegios con PIE</h3>
+              <button id="button2" class="buttonque">¿Qué son?</button>
+
+              <!--Esto se supone que solo aparece cuando se aprieta el botón de "¿Qué son?"-->
+              <div id="exp-colegios-pie">
+                <p>Estrategia inclusiva que permite poner a disposición el sistema escolar recursos humanos y materiales
+                  adicionales para <span style="color:black">proporcionar apoyos a estudiantes que presentan Necesidades
+                    Educativas Especiales (NEE) </span><span style="color:grey"> en los establecimientos de educación
+                    regular y equiparar oportunidades de participación y progreso en su aprendizaje.</span></p>
+              </div>
+              <script>
+                const targetDiv = document.getElementById("exp-colegios-pie");
+                const btn = document.getElementById("button2");
+                targetDiv.style.display = "none"
+                btn.onclick = function () {
+                  if (targetDiv.style.display !== "none") {
+                    targetDiv.style.display = "none";
+                  } else {
+                    targetDiv.style.display = "block";
+                  }
+                };
+              </script>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <a href="colegios.html" class="button">Buscar colegios</a>
+  </div>
+
+
+
+
+
+</body>
+
+</html>
