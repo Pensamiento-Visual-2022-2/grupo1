@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="masinfo.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap" rel="stylesheet">
+  <title>Más información</title>
+</head>
+
+<body bgcolor="#f5f5f5" bgproperties="fixed">
+  
+  <div class="topnav">
+    <a href="index.html">Inicio</a>
+    <a href="especialidad.html">Buscador</a>
+    <a href="about.html">Conócenos</a>
+    <a class="active" href="masinfo.html">Más info</a>
+  </div>
+  <div class="arrowdown">
+    <img src="Imágenes+vectores/down_arrows.svg" alt="Presiona los circulos">
+  </div> 
+  <!-- Inputs-->
+  <input id="section1" type="radio" name="item" checked="checked"/>
+  <input id="section2" type="radio" name="item"/>
+  <input id="section3" type="radio" name="item"/>
+  <input id="section4" type="radio" name="item"/>
+  <!-- Navigation-->
+  <nav class="nav">
+    <label class="nav__item" for="section1"></label>
+    <label class="nav__item" for="section2"></label>
+    <label class="nav__item" for="section3"></label>
+    <label class="nav__item" for="section4"></label>
+  </nav>
+  
+  
+  <!-- Sections-->
+  <section>
+    <h1>Acércate a la municipalidad...</h1>
+  </section>
+  <section>
+    <h1>...o establecimiento educacional correspondiente...</h1>
+  </section>
+  <section>
+    <h1>...para más información sobre...</h1>
+  </section>
+  <section>
+    <h1>...cupos, especialistas e infraestructura.</h1>
+  </section>
+  <!-- Fix the white space when scrolling two sections at the time-->
+  <div class="cover"></div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+.colegios_especialidad {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: -650px;
+  left: 500px;
+}
+
+.col_esp_especialidad {
+  display:flex;
+  flex-direction: column;
+}
+
+.col_pie_especialidad {
+  display:flex;
+  flex-direction: column;
+}
+
+
+.nombre_colegios {
+  background-color: white;
+  padding: 10px;
+  margin:5px;
+  border-radius:15px;
+  font-family: "DMSans_Regular";
+  font-size: 20px;
+  border-color: white;
+}
+
+.titulo_conteo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#n_colegios {
+  color: #828282;
+  font-size: 60px;
+  font-family: "DMSans-Mediuam"
+  margin-right: 4px;
+}
+
+#CC {
+  width: 200px;
+  font-family:"DMSans_Medium";
+  color: #828282;
+  font-size: 25px;
+  margin-left: 4px;
+  
+}

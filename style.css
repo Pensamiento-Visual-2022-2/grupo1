@@ -2,9 +2,9 @@
 .topnav {
     overflow: hidden;
     width: max-content;
-    float:right;
-    position: relative;
-    left: -3%;
+    position: absolute;
+    right: 5%;
+    top: 10px;
     z-index:1000;
   }
   
@@ -22,7 +22,8 @@
   /* Change the color of links on hover */
   .topnav a:hover {
     background-color: #ddd;
-    color: black;
+    background: rgba(0,0,0,0.05);
+    border-radius: 5px;
   }
   
   /* Add a color to the active/current link */
@@ -37,24 +38,28 @@
   margin:0; 
 }
 
-
+.trapezoid {
+	border-bottom: 50px solid #f5f5f5;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 125px;
+}
 
 .caption {
   position: absolute;
   left: -3%;
   right: 0;
-  top: 30%;
+  top: 20%;
   width: 100%;
   text-align: right;
 }
 
 .caption span.border {
   color: #000000;
-  padding: 2px;
   margin: 10px;
   font-size: 25px;
 }
-
 
 
 #titulo {
@@ -133,7 +138,7 @@
   display: inline;
   float: left; /*quedó al revés*/
   width: 50%;
-  max-width: 50%
+  max-width: 50%;
   margin: 20px;
   padding: 10px;
   background-color: gray; /*esto es solo por mientras para ver si está funcionando la delimitación de espacio hehe*/
@@ -148,7 +153,7 @@
   display: inline;
   float: right;
   width: 50%;
-  max-width: 50%
+  max-width: 50%;
   margin: 20px;
   padding: 10px;
   background-color: gray; /*esto es solo por mientras para ver si está funcionando la delimitación de espacio hehe*/
@@ -176,22 +181,22 @@
 
 .button {
   transition-duration: 0.4s;
-  background-color: #325288;
+  background-color: #24A19C;
   border: none;
   border-radius: 10px;
-  color: #f5f5f5;
+  color: #fff;
   padding: 10px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 18px;
+  font-size: 20px;
   font-family:'DMSans_Regular';
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
 }
 .button:hover {
-  background-color: #24A19C;
+  background-color: #d96098;
   color: #FAEEE7;
 }
 
@@ -199,9 +204,9 @@
 .buttonque {
   transition-duration: 0.4s;
   background-color: white;
-  border: none;
+  border: 2px solid var(--green);
   border-radius: 10px;
-  color: grey;
+  color: var(--green);
   padding: 5px;
   text-align: center;
   text-decoration: none;
@@ -217,7 +222,16 @@
   color: #FAEEE7;
 }
 
+#svg_mapa {
+  margin-top: 50px;
+}
 
+.titulos_especialidades {
+  margin-left: 25px;
+  margin-top:65px;
+  font-size: 35px;
+  font-family: "DMSans_Medium";
+}
 
 /* arreglar posición mapita... después de arreglar márgenes de la página */
 .mapita {
@@ -230,24 +244,30 @@
   text-align: center;
 }
 .mapita path {
-  fill:rgb(170, 0, 200);
-  stroke: rgb(78, 5, 111);  
+  fill:gray;
+  stroke: black;  
   stroke-width: 1px;
 }
-.mapita :hover {
-  fill:#000000
+.mapita path:hover {
+  fill:#24A19C
 }
-.mapita a.active {
-    color: #D96098;
-  }
+
 .mapita div {
-  fill:rgb(170, 0, 200);
-  stroke: rgb(78, 5, 111);  
+  fill:gray;
+  stroke: black;  
   stroke-width: 1px;
 }
 .mapita div :hover {
-  fill:#000000
+  fill:#24A19C
 }
+
+
+
+
+
+
+
+    
 .Valpo_region {
   display: none;
   position: absolute;
@@ -256,13 +276,14 @@
   place-content: left left;
 }
 .Valpo_region path {
-  fill:rgb(170, 0, 200);
-  stroke: rgb(78, 5, 111);  
+  fill:gray;
+  stroke: black;  
   stroke-width: 1px;
 }
 .Valpo_region :hover {
-  fill:#000000
+  fill:#24A19C
 }
+
 body, html {
   height: 100%;
   margin: 0;
@@ -274,8 +295,8 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
+
 .bgimg-1 {
   background-image: url("Imágenes+vectores/Puzzle_entero.png");
   min-height: 100%;
@@ -307,6 +328,12 @@ html {
 .column {
   float: left;
   width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+.column2 {
+  float: left;
+  width: 25%;
   margin-bottom: 16px;
   padding: 0 8px;
 }
@@ -542,51 +569,94 @@ input[type="radio"] {
 .filtro {
   display: none;
 }
-
-/* MODAl */
-.modal-container {
-  background-color: rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  opacity: 0;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  transition: opacity 0.3s ease;
+ /* Aquí empieza la prueba de implementación del código de la página renovable (aun falta cambiar las variables, referencias y todo xd (aun no llevoaparte aparece cmo en rojito el selector nada) */
+.region{
+    fill:#aaa7a7;
+    text-align: right;
+    stroke: #292929;
+    stroke-width: 1px;
 }
 
-.modal-container.show {
-  pointer-events: auto;
-  opacity: 1;
+
+#cantidad_colegios {
+  margin: 15px;
+  font-family: sans-serif
+  width: 100px;
+  height: 50px;
+  background-color: grey;
+  display: inline;
+  position: relative;
+  
 }
 
-.modal{
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 30px 50px;
-  width: 600px;
-  max-width: 100%;
+#divregion {
+  display: inline;
 }
 
-.modal h1 {
-  margin: 0
+#divncolegios {
+  display: inline;
 }
 
-.modal. p {
-  font-size: 14px;
+.presumen{
+  display: inline;
 }
 
-#open {
-  background-color: #47a386;
-  border: 0;
-  padding: 10px 10px;
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  display: inline-block;
+#resumen {
+  display: inline;
+  position: absolute;
+  top: 100px;
+  right: 10px
+  width: 10em;
+  height: 4em;
+  background-color: #e6e6e6;
+  padding: 10px;
+  padding-bottom:10px;
+  border-radius:10px;
+  font: sans-serif
 }
+
+
+#nombreregion {
+  position: absolute;
+  margin-left: 25px;
+  margin-top:1px;
+  font-family: "DMSans_Medium";
+  font-size: 30px;
+}
+
+.nombre_colegios{
+  background-color: white;
+  border: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.nombre_colegios:hover {
+  background-color: #d96098;
+  color: white;
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+

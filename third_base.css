@@ -1,0 +1,112 @@
+#Skills{
+  font-size: 20px;
+  margin: 45px auto;
+  overflow: hidden;
+}
+
+.Skill_Bar{
+  width: 50%;
+  height: 35 px;
+  position: relative;
+  background: rgb(17, 17,17,3);
+  border-radius: 1000px;
+  text-transform: uppercase;
+  margin: 20px auto;
+}
+
+.skill_area{
+  font-size: 16 px;
+  z-index: 1;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 15px;
+  text-shadow: none;
+  color: #fff;
+  font-family: 'Courier New', Courier;
+}
+
+.Percentage{
+  z-index: 3;
+  position: relative;
+  margin-right: 15px;
+  margin-top: 10px;
+  float: right;
+  text-shadow: none;
+  color:#fff;
+  font-family: 'Courier New', Courier;
+}
+
+#html{
+  width: 100%;
+  animation: animate-html 3s;
+  height: 35px;
+  position: relative;
+  border-radius: 1000px;
+  background-color: #d64cd6;
+}
+
+#css{
+  width: 95%;
+  animation: animate-html 3s;
+  height: 35px;
+  position: relative;
+  border-radius: 1000px;
+  background-color: #86e77d;
+}
+
+#js{
+  width: 70%;
+  animation: animate-JavaScript 3s;
+  height: 35px;
+  position: relative;
+  border-radius: 1000px;
+  background-color: #86e77d;
+}
+
+#bs{
+  width: 95%;
+  animation: animate-bs 3s;
+  height: 35px;
+  position: relative;
+  border-radius: 1000px;
+  background-color: #165010;
+}
+
+#php{
+  width: 90%;
+  animation: animate-php 3s;
+  height: 35px;
+  position: relative;
+  border-radius: 1000px;
+  background-color: #165010;
+}
+
+
+
+/*//// hola ///*/
+
+@keyframes animate-html{
+  from{width: 0px;}
+  to{width: 100%;}
+}
+
+@keyframes animate-css{
+  from{width: 0px;}
+  to{width: 95%;}
+}
+
+@keyframes animate-JavaScript{
+  from{width: 0px;}
+  to{width: 70%;}
+}
+
+@keyframes animate-bs{
+  from{width: 0px;}
+  to{width: 95%;}
+}
+
+
+@keyframes animate-php{
+  from{width: 0px;}
+  to{width: 90%;}
+}

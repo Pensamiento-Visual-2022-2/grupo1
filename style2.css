@@ -1,0 +1,782 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    width: max-content;
+    position: absolute;
+    right: 5%;
+    top: 10px;
+    z-index:1000;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family:'DMSans_Medium';
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    background: rgba(0,0,0,0.05);
+    border-radius: 5px;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    color: #D96098;
+  }
+.title {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  right: 50%;
+  margin:0; 
+}
+
+.trapezoid {
+	border-bottom: 50px solid #f5f5f5;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 125px;
+}
+
+.caption {
+  position: absolute;
+  left: -3%;
+  right: 0;
+  top: 20%;
+  width: 100%;
+  text-align: right;
+}
+
+.caption span.border {
+  color: #000000;
+  margin: 10px;
+  font-size: 25px;
+}
+
+
+#titulo {
+  font-size: 400%;
+  font-family:'DMSans_Bold'; 
+}
+
+#titulo-buscador {
+  font-size: 200%;
+  font: "DMSans_Bold";
+  color: black;
+  float: left;
+  padding: 5px;
+  margin-left: 20px;
+  margin-top: 8px;
+  display: block;
+}
+
+#N1 {
+  padding: 6px;
+  margin: 6px;
+  margin-right: 2px;
+  font-size: 150%;
+  font: "DMSans_Regular";
+  background: #24a19c;
+  border: 160% 160%;
+  border-radius: 50%;
+  color: #f5f5f5;
+}
+
+#I1 {
+  font: 'DMSans_Regular';
+  color: black;
+  font-size: 130%;
+  display: block;
+
+}
+
+.info-colegio {
+  width: 70%;
+  height: 350px;
+  background: white;
+  margin: 20px;
+  display: none;
+}
+
+/* Fuentes DMSans a utilizar */
+@font-face {
+    font-family:'DMSans_Bold';
+    src:url("Fuentes/DMSans-Bold.ttf");
+}
+@font-face {
+  font-family:'DMSans_Bold_Italic';
+  src:url("Fuentes/DMSans-BoldItalic.ttf");
+}
+@font-face {
+  font-family:'DMSans_Italic';
+  src:url("Fuentes/DMSans-Italic.ttf");
+}
+@font-face {
+  font-family:'DMSans_Medium';
+  src:url("Fuentes/DMSans-Medium.ttf");
+}
+@font-face {
+  font-family:'DMSans_Medium_Italic';
+  src:url("Fuentes/DMSans-MediumItalic.ttf");
+}
+@font-face {
+  font-family:'DMSans_Regular';
+  src:url("Fuentes/DMSans-Regular.ttf");
+}
+
+
+/*Estilo de sección descripción de establecimientos*/
+.colegios-especiales {
+  display: inline;
+  float: left; /*quedó al revés*/
+  width: 50%;
+  max-width: 50%;
+  margin: 20px;
+  padding: 10px;
+  background-color: gray; /*esto es solo por mientras para ver si está funcionando la delimitación de espacio hehe*/
+}
+
+#establecimiento {
+  font-size: 23px;
+  margin: 5px;
+}
+
+.colegios-pie {
+  display: inline;
+  float: right;
+  width: 50%;
+  max-width: 50%;
+  margin: 20px;
+  padding: 10px;
+  background-color: gray; /*esto es solo por mientras para ver si está funcionando la delimitación de espacio hehe*/
+}
+
+#colegioimg {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding: 10px;
+  width: 25%;
+}
+
+  
+#exp-colegios-especiales {
+  padding: 10px;
+  margin: 10px;
+}
+
+#exp-colegios-pie {
+  padding: 10px;
+  margin: 10px;
+}
+
+.button {
+  transition-duration: 0.4s;
+  background-color: #24A19C;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family:'DMSans_Regular';
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+.button:hover {
+  background-color: #d96098;
+  color: #FAEEE7;
+}
+
+
+.buttonque {
+  transition-duration: 0.4s;
+  background-color: white;
+  border: 2px solid var(--green);
+  border-radius: 10px;
+  color: var(--green);
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-family:'DMSans_Regular';
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+.buttonque:hover {
+  background-color: #24A19C;
+  color: #FAEEE7;
+}
+
+#svg_mapa {
+  margin-top: 50px;
+}
+
+.titulos_especialidades {
+  margin-left: 25px;
+  margin-top:65px;
+  font-size: 35px;
+  font-family: "DMSans_Medium";
+}
+
+/* arreglar posición mapita... después de arreglar márgenes de la página */
+.mapita {
+  width: 50%;
+  display: flex;
+  place-content: left left;
+  position: absolute;
+  left: -25%;
+  top: 20%;
+  text-align: center;
+}
+.mapita path {
+  fill:gray;
+  stroke: black;  
+  stroke-width: 1px;
+}
+.mapita path:hover {
+  fill:#24A19C
+}
+
+.mapita div {
+  fill:gray;
+  stroke: black;  
+  stroke-width: 1px;
+}
+.mapita div :hover {
+  fill:#24A19C
+}
+
+
+
+
+
+
+
+    
+.Valpo_region {
+  display: none;
+  position: absolute;
+  left: 42.5%;
+  top: 35%;
+  place-content: left left;
+}
+.Valpo_region path {
+  fill:gray;
+  stroke: black;  
+  stroke-width: 1px;
+}
+.Valpo_region :hover {
+  fill:#24A19C
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-1 {
+  background-image: url("Imágenes+vectores/Puzzle_entero.png");
+  min-height: 100%;
+}
+
+.Contexto {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family:'DMSans_Bold';
+  color: #111;
+  font-size: 25px;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+/* Cosas de la pagina about */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+.column2 {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  font-family:'DMSans_Medium';
+}
+
+.about-section {
+  padding: 60px;
+  text-align: center;
+  background-color: #76dbd7;
+  color: black;
+  font-family:'DMSans_Medium';
+}
+
+#conocenos {
+  padding: 6px;
+  margin: 6px;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title3 {
+  color: grey;
+}
+.button2 {
+  transition-duration: 0.4s;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #325288;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.button2:hover {
+  background-color: #24A19C;
+}
+
+.cssanimation, .cssanimation span {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.cssanimation span { display: inline-block }
+
+.fadeInBottom { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}
+.flex-parent {
+  display: flex;
+}
+.flex-child {
+  flex: 1;
+}
+
+
+/* RESET RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --black: #000000;
+  --white: #fff;
+  --green: #24A19C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 50px 0;
+  color: var(--black);
+  font: 1rem/1.3 sans-serif;
+}
+
+.author-archive {
+  padding: 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 a {
+  transition: all 0.1s;
+}
+
+h1 a:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+
+.filters {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filters * {
+  display: inline-block;
+}
+
+.filters label {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 2rem;
+  min-width: 50px;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.filters label:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+
+/* FILTERED ELEMENTS (POSTS)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.posts {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.posts .post {
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.posts .post-title {
+  font-size: 1.3rem;
+}
+
+.posts .post-title:hover {
+  text-decoration: underline;
+}
+
+.posts figcaption {
+  padding: 1rem;
+}
+
+.posts .post-categories {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.posts .post-categories * {
+  display: inline-block;
+}
+
+.posts .post-categories li {
+  margin-bottom: 0.2rem;
+}
+
+.posts .post-categories a {
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid;
+  line-height: normal;
+  transition: all 0.1s;
+}
+
+.posts .post-categories a:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+
+/* FILTERING RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[value="General"]:checked ~ .filters [for="General"],
+[value="ColegiosPIE"]:checked ~ .filters [for="ColegiosPIE"],
+[value="EscuelasEspeciales"]:checked ~ .filters [for="EscuelasEspeciales"] {
+  background: var(--green);
+  color: var(--white);
+}
+
+[value="General"]:checked ~ .posts [data-category] {
+  display: block;
+}
+
+[value="ColegiosPIE"]:checked ~ .posts .post:not([data-category~="ColegiosPIE"]),
+[value="EscuelasEspeciales"]:checked ~ .posts .post:not([data-category~="EscuelasEspeciales"]),
+
+
+.filtro {
+  display: none;
+}
+ /* Aquí empieza la prueba de implementación del código de la página renovable (aun falta cambiar las variables, referencias y todo xd (aun no llevoaparte aparece cmo en rojito el selector nada) */
+.region{
+    fill:#aaa7a7;
+    text-align: right;
+    stroke: #292929;
+    stroke-width: 1px;
+}
+
+
+#cantidad_colegios {
+  margin: 15px;
+  font-family: sans-serif
+  width: 100px;
+  height: 50px;
+  background-color: grey;
+  display: inline;
+  position: relative;
+  
+}
+
+#divregion {
+  display: inline;
+}
+
+#divncolegios {
+  display: inline;
+}
+
+.presumen{
+  display: inline;
+}
+
+#resumen {
+  display: inline;
+  position: absolute;
+  top: 100px;
+  right: 10px
+  width: 10em;
+  height: 4em;
+  background-color: #e6e6e6;
+  padding: 10px;
+  padding-bottom:10px;
+  border-radius:10px;
+  font: sans-serif
+}
+
+
+/*ESTILO TABLA COLEGIOS*/
+
+.colegios_especialidad {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-content: sapce-between;
+  flex-gap: 80px;
+  position: relative;
+  top: -600px;
+  left: 500px;
+}
+
+.col_esp_especialidad {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 10px;
+}
+
+.col_pie_especialidad {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left:10px;
+}
+
+
+.nombre_colegios {
+  background-color: white;
+  padding: 10px;
+  margin:5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius:15px;
+  width: 400px;
+  height: 3em;
+  font-family: "DMSans_Regular";
+  font-size: 20px;
+}
+
+.titulo_conteo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: top;
+  
+}
+
+#n_colegios {
+  color: #828282;
+  font-size: 60px;
+  font-family: "DMSans-Mediuam"
+  margin-right: 4px;
+}
+
+#CC {
+  display:inline;
+  font-family:"DMSans_Medium";
+  color: #828282;
+  font-size: 25px;
+  margin-left: 4px;
+  
+}
+
+#nombreregion {
+  position: absolute;
+  margin-left: 25px;
+  margin-top:1px;
+  font-family: "DMSans_Medium";
+  font-size: 30px;
+
+
+button {
+  background-color: #47a386;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 25px;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+#modal_container_e4 {
+
+    background-color: #ffffff;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-family: "DMSans-Regular"
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}

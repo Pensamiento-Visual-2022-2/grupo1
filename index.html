@@ -12,7 +12,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Title</title>
+  <title>Inicio</title>
+  <script src="jquery-3.6.1.min.js"></script>
 </head>
 
 
@@ -24,7 +25,9 @@
   <!--BARRA SUPERIOR DE CONTENIDOS-->
   <div class="topnav">
     <a class="active" href="index.html">Inicio</a>
+    <a href="especialidad.html">Buscador</a>
     <a href="about.html">Conócenos</a>
+    <a href="masinfo.html">Más info</a>
   </div>
 
   <!--DIBUJO-->
@@ -32,15 +35,39 @@
 
   <div class="bgimg-1"></div>
   <div class="caption">
-    <span id="titulo" class="border">Colegios Especiales<br>& PIE en Chile</span>
+    <span id="titulo" class="border">Colegios Especiales<br> & PIE en Chile</span>
+    <span style="font-size:20px; text-shadow: 0px 0px 1px #000000;" font-family='DMSans_Regular'><br><br>Te ayudamos a encontrar establecimientos educacionales <br> municipales y subencionados en la Región de Aysén<br>para infantes con Necesidades Educativas Especiales (NEE)<br> o en situación de discapacidad.</i></span>
   </div>
   </div>
 
   <!--OPCIONES DE EDUCACIÓN ESPECIAL-->
 
-  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px">
-    <h3 class="Contexto" style="text-align:center;">Opciones de <span style="color: #d96098;"> educación diferencial
+
+
+
+  <div style="color:grey;background-color:white;text-align:center;padding:50px 80px">
+      
+
+  
+  <script>
+    let cont1=document.getElementById("cont1")
+    let cant1=0,
+    tiem=20
+
+    let tiempo1=setInterval(()=>{
+      cont1.textContent=cant1+=1
+
+      if(cant1===10)
+      {
+        clearInterval(tiempo1)
+      }
+    },1);
+    
+  </script>
+
+    <h3 class="Contexto" style="text-align:center;"><br><br>Opciones de <span style="color: #d96098;"> educación diferencial
       </span> en Chile</h3>
+    
 
 
     <section id="tipos-establecimiento">
@@ -56,8 +83,8 @@
               <!--Esto se supone que solo aparece cuando se aprieta el botón de "¿Qué son?"-->
 
               <div id="exp-colegios-especiales">
-                <p>Establecimientos educacionales especializados que <strong><span style="color:black">educan a
-                      estudiantes con discapacidad que requieren apoyos permanentes e intensivos</span></strong> <span
+                <p>Establecimientos educacionales especializados que <b><span style="color:black">educan a
+                      estudiantes con discapacidad que requieren apoyos permanentes e intensivos</span></b> <span
                     style="color:grey"> en el área de la comunicación, del funcionamiento adaptativo, de su autonomía e
                     independencia personal, y adecuaciones curriculares de acceso o a los objetivos de aprendizaje según
                     las características y necesidades de los estudiantes frente al currículum, para así <b><span
@@ -92,9 +119,9 @@
 
               <!--Esto se supone que solo aparece cuando se aprieta el botón de "¿Qué son?"-->
               <div id="exp-colegios-pie">
-                <p>Estrategia inclusiva que permite poner a disposición el sistema escolar recursos humanos y materiales
-                  adicionales para <span style="color:black">proporcionar apoyos a estudiantes que presentan Necesidades
-                    Educativas Especiales (NEE) </span><span style="color:grey"> en los establecimientos de educación
+                <p> El <b><span style="color:black">Programa de integración escolar (PIE)</span></b> es una estrategia inclusiva que permite poner a disposición el sistema escolar recursos humanos y materiales
+                  adicionales para <b><span style="color:black">proporcionar apoyos a estudiantes que presentan Necesidades
+                    Educativas Especiales (NEE) </span></b><span style="color:grey"> en los establecimientos de educación
                     regular y equiparar oportunidades de participación y progreso en su aprendizaje.</span></p>
               </div>
               <script>
@@ -116,13 +143,11 @@
 
       </div>
     </section>
-    <a href="colegios.html" class="button">Buscar colegios</a>
+    <a href="especialidad.html" class="button">BUSCAR COLEGIOS</a>
   </div>
 
-
-
-
-
 </body>
+
+
 
 </html>
